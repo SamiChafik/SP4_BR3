@@ -1,1 +1,61 @@
-<p>login works!</p>
+<div class="login-container">
+    <div class="login-card">
+      <div class="login-header">
+        <h2>Welcome Back</h2>
+        <p>Please enter your credentials to login</p>
+      </div>
+  
+      <form class="login-form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="your@email.com"
+            [(ngModel)]="credentials.email"
+            required
+            #email="ngModel"
+            [ngClass]="{'invalid': email.invalid && email.touched}"
+          >
+          <div class="validation-error" *ngIf="email.invalid && email.touched">
+            Please enter a valid email address
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            placeholder="••••••••"
+            [(ngModel)]="credentials.password"
+            required
+            minlength="6"
+            #password="ngModel"
+            [ngClass]="{'invalid': password.invalid && password.touched}"
+          >
+          <div class="validation-error" *ngIf="password.invalid && password.touched">
+            Password must be at least 6 characters
+          </div>
+        </div>
+  
+        <div class="remember-forgot">
+          <label class="remember-me">
+            <input type="checkbox" name="remember">
+            <span>Remember me</span>
+          </label>
+          <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+  
+        <button type="submit" class="login-button">
+          Sign In
+        </button>
+      </form>
+  
+      <div class="signup-link">
+        Don't have an account? <a href="#">Sign up</a>
+      </div>
+    </div>
+  </div>
