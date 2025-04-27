@@ -1,0 +1,5 @@
+<h2>Modifier l'article</h2>
+    <input [(ngModel)]="post.title" placeholder="Titre">
+    <textarea [(ngModel)]="post.content" placeholder="Contenu"></textarea>
+    <button (click)="save()">Enregistrer</button>
+    <button (click)="cancel()">Annuler</button>

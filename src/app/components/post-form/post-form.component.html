@@ -1,1 +1,16 @@
-<p>post-form works!</p>
+<h2>Créer un nouvel article</h2>
+
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label>Titre :</label>
+    <input [(ngModel)]="newPost.title" name="title" required>
+  </div>
+
+  <div>
+    <label>Contenu :</label>
+    <textarea [(ngModel)]="newPost.content" name="content" required></textarea>
+  </div>
+
+  <button type="submit">Enregistrer</button>
+  <button type="button" (click)="Router.navigate(['/'])">Annuler</button>
+</form>
