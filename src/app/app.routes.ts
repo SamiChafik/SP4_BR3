@@ -8,8 +8,8 @@ import { PostFormComponent } from './components/post-form/post-form.component';
 import { PostEditComponent } from './post-edit/post-edit.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent, canActivate:[AuthGuard]},
-    { path: 'articles', component: PostListComponent, canActivate:[AuthGuard]},
+    { path: '', component: HomeComponent,},
+    { path: 'articles', component: PostListComponent,},
     { path: 'new', component: PostFormComponent, canActivate:[AuthGuard]},
     { path: 'edit/:id', component: PostFormComponent, canActivate:[AuthGuard]},
     { path: 'posts/edit/:id', component: PostEditComponent, canActivate:[AuthGuard]},
