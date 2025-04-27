@@ -1,34 +1,42 @@
 <div class="login-container">
     <div class="login-card">
       <div class="login-header">
-        <h2>Welcome </h2>
+        <h2>Welcome</h2>
         <p>Please enter your credentials to login</p>
       </div>
   
-      <form class="login-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <form class="login-form" [formGroup]="loginform" (ngSubmit)="proceedlogin()">
+        <div class="form-error" *ngIf="loginform.errors?.['invalidCredentials']" style="color: red">
+          Invalid email or password
+        </div>
+        <div class="form-error" *ngIf="loginform.errors?.['serverError']">
+          Login failed. Please try again later.
+        </div>
+  
         <div class="form-group">
           <label for="email">Email Address</label>
           <input type="text" placeholder="Email" formControlName="email">
-          <!-- <div class="validation-error" *ngIf="email.invalid && email.touched">
-            Please enter a valid email address
-          </div> -->
+          <div class="validation-error" *ngIf="loginform.get('email')?.invalid && loginform.get('email')?.touched">
+            <span *ngIf="loginform.get('email')?.errors?.['required']">Email is required</span>
+            <span *ngIf="loginform.get('email')?.errors?.['email']">Please enter a valid email</span>
+          </div>
         </div>
   
         <div class="form-group">
           <label for="password">Password</label>
           <input type="password" placeholder="Password" formControlName="password">
-          <!-- <div class="validation-error" *ngIf="password.invalid && password.touched">
-            Password must be at least 6 characters
-          </div> -->
+          <div class="validation-error" *ngIf="loginform.get('password')?.invalid && loginform.get('password')?.touched">
+            <span *ngIf="loginform.get('password')?.errors?.['required']">Password is required</span>
+          </div>
         </div>
   
-        <button type="submit" class="login-button">
+        <button type="submit" class="login-button" [disabled]="loginform.invalid">
           Sign In
         </button>
       </form>
   
       <div class="signup-link">
-        Don't have an account? <a routerLink="/register" routerLinkActive="router-link-active" >Sign up</a>
+        Don't have an account? <a routerLink="/register" routerLinkActive="router-link-active">Sign up</a>
       </div>
     </div>
   </div>
