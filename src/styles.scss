@@ -11,6 +11,8 @@ body {
     animation: wave 50s ease infinite;
     // animation: gradient 8s ease infinite;
 
+    overflow-y: auto;
+
 }
 
 @keyframes wave {
