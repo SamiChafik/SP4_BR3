@@ -5,7 +5,6 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f8fafc;
   padding: 1rem;
   font-family: 'Inter', sans-serif;
 }
@@ -17,6 +16,7 @@
   padding: 2.5rem;
   width: 100%;
   max-width: 420px;
+  border-radius: 10px;
 }
 
 .login-header {
@@ -137,6 +137,7 @@
     color: #6366f1;
     font-weight: 500;
     text-decoration: none;
+    cursor: pointer;
 
     &:hover {
       text-decoration: underline;
