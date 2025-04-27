@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Découverte d'Angular : Les Fondamentaux",
+      "content": "Angular est un framework puissant pour construire des applications web modernes. Dans cet article, nous explorons les concepts clés comme les composants, les modules et les services. Parfait pour les débutants qui veulent démarrer avec Angular 17.",
+      "category": "Développement Web",
+      "date": "2023-11-15"
+    },
+    {
+      "id": 2,
+      "title": "Les Meilleures Pratiques pour le CSS Moderne",
+      "content": "Découvrez comment utiliser Flexbox, Grid et les variables CSS pour créer des designs responsives plus efficacement. Cet article inclut des exemples pratiques et des astuces pour éviter les pièges courants.",
+      "category": "CSS",
+      "date": "2023-12-02"
+    },
+    {
+      "id": 3,
+      "title": "Introduction à TypeScript",
+      "content": "TypeScript apporte le typage statique à JavaScript. Nous couvrons ici les interfaces, les types génériques et comment l'utiliser avec Angular pour un code plus robuste.",
+      "category": "TypeScript",
+      "date": "2024-01-10"
+    },
+    {
+      "id": 4,
+      "title": "Créer une API REST avec Node.js et Express",
+      "content": "Guide étape par étape pour construire une API sécurisée avec authentification JWT, validation des données et connexion à MongoDB. Parfait pour alimenter votre application Angular.",
+      "category": "Backend",
+      "date": "2024-02-05"
+    },
+    {
+      "id": 5,
+      "title": "Optimiser les Performances d'une Application Angular",
+      "content": "Techniques avancées pour réduire le temps de chargement : lazy loading, prerendering, changement detection strategy et bien plus. Avec des benchmarks concrets.",
+      "category": "Performance",
+      "date": "2024-03-18"
+    }
+  ]
+}
