@@ -11,6 +11,6 @@
     <textarea [(ngModel)]="newPost.content" name="content" required></textarea>
   </div>
 
-  <button type="submit">Enregistrer</button>
-  <button type="button" (click)="Router.navigate(['/'])">Annuler</button>
+  <button type="submit" class="btn btn-primary">Enregistrer</button>
+  <button type="button" (click)="Router.navigate(['/'])" class="btn btn-danger">Annuler</button>
 </form>
