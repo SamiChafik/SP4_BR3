@@ -1,1 +1,91 @@
-<p>home works!</p>
+<!-- home.component.html -->
+<div class="home-container">
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">Bienvenue sur Blog Tech</h1>
+        <p class="hero-description">
+          Un espace dédié au partage de connaissances en développement web, architecture logicielle 
+          et technologies émergentes. Découvrez les articles, tutoriels et réflexions sur l'évolution 
+          du paysage technologique.
+        </p>
+        <div class="cta-buttons">
+          <a routerLink="/articles" class="btn btn-primary">Voir tous les articles</a>
+        </div>
+      </div>
+    </section>
+  
+    <section class="featured-posts">
+      <h2 class="section-title">Articles Récents</h2>
+      <div class="posts-grid">
+        <div class="post-card">
+          <div class="post-image">
+            <img src="assets/angular_signals.png" alt="Angular Signals">
+          </div>
+          <div class="post-content">
+            <span class="post-category">Angular</span>
+            <h3 class="post-title">Maîtriser les Signals dans Angular 16+</h3>
+            <p class="post-excerpt">
+              Une exploration approfondie du nouveau système de réactivité d'Angular 
+              et comment il change la façon dont nous construisons des applications.
+            </p>
+            <div class="post-meta">
+              <span class="post-date">15 Mars 2024</span>
+              <span class="read-time">8 min de lecture</span>
+            </div>
+            <a routerLink="/articles/angular-signals" class="read-more">Lire l'article →</a>
+          </div>
+        </div>
+  
+        <!-- Post Card 2 -->
+        <div class="post-card">
+          <div class="post-image">
+            <img src="assets/rust.png" alt="Rust and WebAssembly">
+          </div>
+          <div class="post-content">
+            <span class="post-category">Performance Web</span>
+            <h3 class="post-title">Rust + WebAssembly: Le Futur du Frontend?</h3>
+            <p class="post-excerpt">
+              Comment Rust et WebAssembly révolutionnent les performances des applications 
+              web avec des benchmarks comparatifs impressionnants.
+            </p>
+            <div class="post-meta">
+              <span class="post-date">28 Février 2024</span>
+              <span class="read-time">12 min de lecture</span>
+            </div>
+            <a routerLink="/articles/rust-webassembly" class="read-more">Lire l'article →</a>
+          </div>
+        </div>
+  
+        <!-- Post Card 3 -->
+        <div class="post-card">
+          <div class="post-image">
+            <img src="assets/ai_codegen.webp" alt="AI Code Generation">
+          </div>
+          <div class="post-content">
+            <span class="post-category">IA Générative</span>
+            <h3 class="post-title">Génération de Code avec GPT-4: Bonnes Pratiques</h3>
+            <p class="post-excerpt">
+              Mon workflow pour utiliser efficacement l'IA générative dans le développement 
+              sans sacrifier la qualité du code.
+            </p>
+            <div class="post-meta">
+              <span class="post-date">10 Février 2024</span>
+              <span class="read-time">10 min de lecture</span>
+            </div>
+            <a routerLink="/articles/ai-code-generation" class="read-more">Lire l'article →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="newsletter-section">
+      <div class="newsletter-content">
+        <h3>Abonnez-vous à la newsletter</h3>
+        <p>Recevez les nouveaux articles directement dans votre boîte mail</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Votre email" required>
+          <button type="submit" class="btn btn-primary">S'abonner</button>
+        </form>
+      </div>
+    </section>
+  </div>
