@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { PostService } from '../../services/post-service';
 import id from '@angular/common/locales/id';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-post-list',
@@ -15,7 +16,7 @@ export class PostListComponent implements OnInit {
 
   posts: any[] = [];
 
-  constructor(private postService: PostService) {}
+  constructor(private postService: PostService, public authService: AuthService) {}
 
   ngOnInit(): void {
     this.loadPosts();

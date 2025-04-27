@@ -1,15 +1,15 @@
 <div class="container">
     <h1>Mon Blog</h1>
     
-   <button class="btn" routerLink="/new">Nouvel article</button> 
+   <button class="btn" routerLink="/new" *ngIf="authService.isLoggedIn()">Nouvel article</button> 
   
     <div *ngFor="let post of posts" class="post">
       <h2>{{ post.title }}</h2>
       <p>{{ post.content }}</p>
       
       <div class="actions">
-        <button (click)="editPost(post)" class="btn-edit">Modifier</button>
-        <button (click)="deletePost(post.id)" class="btn-delete">Supprimer</button>
+        <button (click)="editPost(post)" class="btn-edit" *ngIf="authService.isLoggedIn()">Modifier</button>
+        <button (click)="deletePost(post.id)" class="btn-delete" *ngIf="authService.isLoggedIn()">Supprimer</button>
       </div>
     </div>
   </div>
